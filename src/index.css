@@ -1,27 +1,95 @@
 @import "tailwindcss";
 
+@layer base {
+  :root {
+    --app-white: #ffffff;
+    --app-black: #000000;
+    
+    --app-winner-text: #4ade80;
+    --app-winner-border: rgba(34, 197, 94, 0.3);
+    
+    --app-slate-50: #FCFAF9; 
+    --app-slate-100: #F3F4F1; 
+    --app-slate-200: #E2E4E1; 
+    --app-slate-300: #D0D3CF; 
+    --app-slate-400: #A3A6A1; 
+    --app-slate-500: #848782; 
+    --app-slate-600: #6B6D68; 
+    --app-slate-700: #4A4C48; 
+    --app-slate-800: #2D2F2C; 
+    --app-slate-900: #1C1E21; 
+    
+    --app-blue-50: #F0F4F8;
+    --app-blue-100: #D9E2EC;
+    --app-blue-200: #BCCCDC;
+    --app-blue-300: #9FB3C8;
+    --app-blue-400: #829AB1;
+    --app-blue-500: #627D98;
+    --app-blue-600: #486581;
+    --app-blue-700: #2E5A88; 
+    --app-blue-800: #244C76;
+    --app-blue-900: #1C3D5A;
+  }
+
+  .dark {
+    --app-white: #1C1E21; 
+    --app-black: #FCFAF9;
+    
+    --app-winner-text: #166534;
+    --app-winner-border: rgba(22, 101, 52, 0.3);
+    
+    --app-slate-900: #FCFAF9; 
+    --app-slate-800: #F3F4F1; 
+    --app-slate-700: #E2E4E1; 
+    --app-slate-600: #D0D3CF; 
+    --app-slate-500: #A3A6A1; 
+    --app-slate-400: #848782; 
+    --app-slate-300: #6B6D68; 
+    --app-slate-200: #4A4C48; 
+    --app-slate-100: #2D2F2C; 
+    --app-slate-50: #121417; 
+    
+    --app-blue-900: #f0f4f8;
+    --app-blue-800: #d9e2ec;
+    --app-blue-700: #829AB1; 
+    --app-blue-600: #486581;
+    --app-blue-500: #2E5A88;
+    --app-blue-400: #244C76;
+    --app-blue-300: #1C3D5A;
+    --app-blue-200: #12293e;
+    --app-blue-100: #0a1725;
+    --app-blue-50: #050c14; 
+  }
+}
+
 @theme {
-  --color-slate-50: #FCFAF9; 
-  --color-slate-100: #F3F4F1; 
-  --color-slate-200: #E2E4E1; 
-  --color-slate-300: #D0D3CF; 
-  --color-slate-400: #A3A6A1; 
-  --color-slate-500: #848782; 
-  --color-slate-600: #6B6D68; 
-  --color-slate-700: #4A4C48; 
-  --color-slate-800: #2D2F2C; 
-  --color-slate-900: #1C1E21; 
+  --color-white: var(--app-white);
+  --color-black: var(--app-black);
   
-  --color-blue-50: #F0F4F8;
-  --color-blue-100: #D9E2EC;
-  --color-blue-200: #BCCCDC;
-  --color-blue-300: #9FB3C8;
-  --color-blue-400: #829AB1;
-  --color-blue-500: #627D98;
-  --color-blue-600: #486581;
-  --color-blue-700: #2E5A88; 
-  --color-blue-800: #244C76;
-  --color-blue-900: #1C3D5A;
+  --color-winner-text: var(--app-winner-text);
+  --color-winner-border: var(--app-winner-border);
+  
+  --color-slate-50: var(--app-slate-50); 
+  --color-slate-100: var(--app-slate-100); 
+  --color-slate-200: var(--app-slate-200); 
+  --color-slate-300: var(--app-slate-300); 
+  --color-slate-400: var(--app-slate-400); 
+  --color-slate-500: var(--app-slate-500); 
+  --color-slate-600: var(--app-slate-600); 
+  --color-slate-700: var(--app-slate-700); 
+  --color-slate-800: var(--app-slate-800); 
+  --color-slate-900: var(--app-slate-900); 
+  
+  --color-blue-50: var(--app-blue-50);
+  --color-blue-100: var(--app-blue-100);
+  --color-blue-200: var(--app-blue-200);
+  --color-blue-300: var(--app-blue-300);
+  --color-blue-400: var(--app-blue-400);
+  --color-blue-500: var(--app-blue-500);
+  --color-blue-600: var(--app-blue-600);
+  --color-blue-700: var(--app-blue-700); 
+  --color-blue-800: var(--app-blue-800);
+  --color-blue-900: var(--app-blue-900);
 
   --radius-2xl: 4px;
   --radius-xl: 4px;

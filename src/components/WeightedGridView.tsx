@@ -241,10 +241,10 @@ export function WeightedGridView({ grid }: { grid: Grid }) {
                   const isWinner = total === maxTotal && total > 0 && maxTotal > 0;
                   return (
                     <td key={`total-${opt.id}`} className="px-6 py-4 border-l border-slate-700 text-center">
-                      <div className={`text-2xl font-serif font-bold ${isWinner ? 'text-green-400' : 'text-slate-300'}`}>
+                      <div className={`text-2xl font-serif font-bold ${isWinner ? 'text-winner-text' : 'text-slate-300'}`}>
                         {total}
                       </div>
-                      {isWinner && <div className="text-[10px] text-green-400 font-bold uppercase tracking-[1px] mt-1 border border-green-500/30 inline-block px-2 py-0.5">Recommended</div>}
+                      {isWinner && <div className="text-[10px] text-winner-text border-winner-border font-bold uppercase tracking-[1px] mt-1 border inline-block px-2 py-0.5">Recommended</div>}
                     </td>
                   )
                 })}
