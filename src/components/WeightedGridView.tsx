@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useGridStore } from '../store/useGridStore';
 import { Grid, GridOption, GridCriteria } from '../types';
 import { Plus, Trash2, Edit2 } from 'lucide-react';
+import { Disclaimer } from './Disclaimer';
 
 export function WeightedGridView({ grid }: { grid: Grid }) {
   const { updateGrid } = useGridStore();
@@ -258,6 +259,7 @@ export function WeightedGridView({ grid }: { grid: Grid }) {
           )}
         </div>
       </div>
+      <Disclaimer />
     </div>
   );
 }

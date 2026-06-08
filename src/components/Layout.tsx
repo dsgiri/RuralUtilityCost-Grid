@@ -5,6 +5,7 @@ import { useThemeStore } from '../store/useThemeStore';
 import { CookieConsent } from './CookieConsent';
 import { AdContainer } from './AdContainer';
 import { trackEvent } from '../lib/analytics';
+import { Disclaimer } from './Disclaimer';
 
 export function Layout({ children }: { children: ReactNode }) {
   const location = useLocation();
@@ -180,10 +181,7 @@ export function Layout({ children }: { children: ReactNode }) {
             <div className="flex items-center space-x-2 text-slate-900 mb-4 font-bold tracking-tight">
               <span>Rural Utility Cost</span>
             </div>
-            <p className="text-[12px] border-l-2 border-blue-700 pl-3 leading-relaxed text-slate-500">
-              Grid is a decision-support tool. All scores, rankings, and recommendations are informational only. 
-              Verify assumptions independently.
-            </p>
+            <Disclaimer type="footer" />
           </div>
           <div>
             <h4 className="text-slate-900 font-semibold mb-4 text-[11px] uppercase tracking-[1px]">Master Site</h4>
