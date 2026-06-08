@@ -2,10 +2,14 @@ import { Link } from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { ArrowRight, BarChart2, Plus, FileText, CheckCircle } from 'lucide-react';
 import { useGridStore } from '../store/useGridStore';
+import { AdContainer } from '../components/AdContainer';
+import { trackEvent } from '../lib/analytics';
 
 export function Home() {
   const { grids } = useGridStore();
   const savedGrids = grids.filter(g => !g.isTemplate).sort((a,b) => b.updatedAt - a.updatedAt);
+
+  const handleCTA = (label: string) => trackEvent('click', { element: label });
 
   return (
     <Layout>
@@ -18,17 +22,19 @@ export function Home() {
             <p className="text-[15px] text-slate-600 mb-8 leading-relaxed max-w-2xl">
               Grid helps you prioritize, compare, and execute. Build 2x2 matrices or weighted scorecards to replace guesswork with data when evaluating land, equipment, or business choices.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
               <Link
                 to="/new"
-                className="inline-flex items-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-6 py-3 font-semibold transition-colors text-[13px] tracking-wide"
+                onClick={() => handleCTA('hero_create_grid_btn')}
+                className="inline-flex items-center justify-center space-x-2 bg-slate-900 hover:bg-slate-800 text-white px-6 py-4 font-semibold transition-colors text-[13px] tracking-wide min-h-[48px]"
               >
                 <Plus className="w-4 h-4" />
                 <span>Create New Grid</span>
               </Link>
               <Link
                 to="/templates"
-                className="inline-flex items-center space-x-2 bg-white hover:bg-slate-50 text-slate-900 px-6 py-3 font-semibold transition-colors border border-slate-300 text-[13px] tracking-wide"
+                onClick={() => handleCTA('hero_browse_templates_btn')}
+                className="inline-flex items-center justify-center space-x-2 bg-white hover:bg-slate-50 text-slate-900 px-6 py-4 font-semibold transition-colors border border-slate-300 text-[13px] tracking-wide min-h-[48px]"
               >
                 <FileText className="w-4 h-4" />
                 <span>Browse Templates</span>
@@ -36,6 +42,8 @@ export function Home() {
             </div>
           </div>
         </section>
+
+        <AdContainer slotId="in-content-home-1" />
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-white border border-slate-200 p-8 flex flex-col h-full hover:border-blue-700 transition-colors">
@@ -46,7 +54,7 @@ export function Home() {
             <p className="text-[13px] text-slate-600 mb-6 flex-grow leading-relaxed">
               Plot options across two axes. Ideal for Effort vs Impact or Cost vs Value choices.
             </p>
-            <Link to="/new?type=2x2" className="text-slate-900 font-bold hover:text-blue-700 flex items-center group text-[13px] uppercase tracking-[1px]">
+            <Link onClick={() => handleCTA('home_card_2x2')} to="/new?type=2x2" className="text-slate-900 font-bold hover:text-blue-700 flex items-center group text-[13px] uppercase tracking-[1px] min-h-[48px]">
               Start 2x2 grid <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -58,7 +66,7 @@ export function Home() {
             <p className="text-[13px] text-slate-600 mb-6 flex-grow leading-relaxed">
               Define criteria, assign weights, and compare complex choices like Buy vs Lease systematically.
             </p>
-            <Link to="/new?type=weighted" className="text-slate-900 font-bold hover:text-blue-700 flex items-center group text-[13px] uppercase tracking-[1px]">
+            <Link onClick={() => handleCTA('home_card_weighted')} to="/new?type=weighted" className="text-slate-900 font-bold hover:text-blue-700 flex items-center group text-[13px] uppercase tracking-[1px] min-h-[48px]">
               Start weighted grid <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -80,7 +88,7 @@ export function Home() {
                 No saved grids yet.
               </div>
             )}
-            <Link to="/saved" className="text-[12px] text-slate-300 hover:text-white font-bold uppercase tracking-[1px] flex items-center mt-auto pt-4 border-t border-slate-800">
+            <Link onClick={() => handleCTA('home_card_saved_all')} to="/saved" className="text-[12px] text-slate-300 hover:text-white font-bold uppercase tracking-[1px] flex items-center mt-auto pt-4 border-t border-slate-800 min-h-[48px]">
               View all saved <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
           </div>

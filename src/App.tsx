@@ -13,10 +13,13 @@ import { Legal } from './pages/Legal';
 import { Contact } from './pages/Contact';
 import { License } from './pages/License';
 import { GridView } from './pages/GridView'; 
+import { NotFound } from './pages/NotFound';
+import { GoogleAnalyticsTracker } from './lib/analytics';
 
 export default function App() {
   return (
     <BrowserRouter>
+      <GoogleAnalyticsTracker />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/templates" element={<Templates />} />
@@ -30,7 +33,9 @@ export default function App() {
         <Route path="/examples" element={<Templates />} /> 
         <Route path="/privacy" element={<Legal />} />
         <Route path="/terms" element={<Legal />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   );
 }
+
