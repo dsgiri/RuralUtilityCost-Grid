@@ -32,7 +32,7 @@ export function CookieConsent() {
           </p>
         </div>
         <div className="flex gap-2 whitespace-nowrap">
-          <a href="/privacy" className="px-4 py-2 text-slate-300 hover:text-white underline underline-offset-2 decoration-slate-500 font-medium tracking-wide">
+          <a href="https://ruralutilitycost.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="px-4 py-2 text-slate-300 hover:text-white underline underline-offset-2 decoration-slate-500 font-medium tracking-wide">
             Read Policy
           </a>
           <button 

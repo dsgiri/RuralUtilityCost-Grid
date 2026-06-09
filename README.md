@@ -1,20 +1,39 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# RuralUtilityCost: Quick Decision Matrix Toolkit
 
-# Run and deploy your AI Studio app
+A React-based toolkit designed to help agricultural and rural utility managers make rapid, structured decisions using various proven frameworks.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/937c034a-1a6d-40fd-b173-fe2466a17e18
+- **18 Decision Frameworks**: Includes SWOT, Eisenhower Priority Matrix, RICE Scoring, MoSCoW, Force Field Analysis, Radar Charts, Cost-Benefit T-Charts, and more.
+- **Interactive Visualizers**: Engage with visual decision tools like Donut charts, Radar charts, Interactive Decision Trees, and Timelines.
+- **Save & Manage**: Local storage persistence allows users to save and revisit custom grid setups and decisions.
+- **Responsive Design**: Built with a clean, high-contrast Tailwind CSS interface tailored for clarity and ease of use on any device.
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **Tailwind CSS**
+- **Zustand** (Local state management)
+- **Lucide React** (Icons)
 
+## Getting Started
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+**Live Link**: [grid.ruralutilitycost.com](https://grid.ruralutilitycost.com)  
+**GitHub Repository**: [https://github.com/dsgiri/ruralutilitycost-grid](https://github.com/dsgiri/ruralutilitycost-grid)
+
+Install dependencies:
+```bash
+npm install
+```
+
+Start the development server:
+```bash
+npm run dev
+```
+
+Build for production:
+```bash
+npm run build
+```

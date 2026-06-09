@@ -207,11 +207,12 @@ export function Layout({ children }: { children: ReactNode }) {
             <h4 className="text-slate-900 font-semibold mb-4 text-[11px] uppercase tracking-[1px]">Legal</h4>
             <nav aria-label="Legal navigation">
               <ul className="space-y-3">
-                <li><Link to="/about" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">About</Link></li>
-                <li><Link to="/contact" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">Contact</Link></li>
-                <li><Link to="/legal" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">Disclaimer</Link></li>
+                <li><a href="https://ruralutilitycost.com/about" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">About Us</a></li>
+                <li><a href="https://ruralutilitycost.com/contact" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">Contact Us</a></li>
+                <li><a href="https://ruralutilitycost.com/disclaimer" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">Disclaimer</a></li>
                 <li><Link to="/license" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">License</Link></li>
-                <li><a href="https://github.com/RuralUtilityCost-Grid" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline" aria-label="View our GitHub Repository">GitHub</a></li>
+                <li><a href="https://ruralutilitycost.com/portfolio" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">Portfolio</a></li>
+                <li><a href="https://github.com/dsgiri/ruralutilitycost-grid" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline" aria-label="View our GitHub Repository">GitHub</a></li>
               </ul>
             </nav>
           </div>
@@ -219,8 +220,8 @@ export function Layout({ children }: { children: ReactNode }) {
         <div className="max-w-6xl mx-auto px-8 pt-8 mt-2 mb-12 border-t border-slate-200 text-[11px] flex flex-col md:flex-row justify-between items-center text-slate-500 font-medium gap-4">
           <p>© {new Date().getFullYear()} Rural Utility Cost. All rights reserved.</p>
           <div className="flex space-x-6 text-[12px]">
-            <Link to="/privacy" className="hover:text-slate-900 focus:outline-none focus:underline text-center">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-slate-900 focus:outline-none focus:underline text-center">Terms of Service</Link>
+            <a href="https://ruralutilitycost.com/privacy-policy" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 focus:outline-none focus:underline text-center">Privacy Policy</a>
+            <a href="https://ruralutilitycost.com/terms-of-use" target="_blank" rel="noopener noreferrer" className="hover:text-slate-900 focus:outline-none focus:underline text-center">Terms of Use</a>
           </div>
         </div>
       </footer>

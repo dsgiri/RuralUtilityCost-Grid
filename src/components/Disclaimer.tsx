@@ -16,7 +16,7 @@ export const Disclaimer: React.FC<DisclaimerProps> = ({ type = 'inline', customT
     return (
       <div className={`text-[12px] border-l-2 border-slate-300 dark:border-slate-600 pl-3 leading-relaxed text-slate-500 ${className}`}>
         {customText || footerDisclaimer}{' '}
-        <Link to="/legal" className="text-slate-900 dark:text-slate-300 font-semibold hover:underline">Read full disclaimer</Link>.
+        <a href="https://ruralutilitycost.com/disclaimer" target="_blank" rel="noopener noreferrer" className="text-slate-900 dark:text-slate-300 font-semibold hover:underline">Read full disclaimer</a>.
       </div>
     );
   }
