@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Layout } from '../components/Layout';
 import { useGridStore } from '../store/useGridStore';
-import { GridCard } from './Templates';
+import { GridCard } from '../components/GridCard';
 import { Plus } from 'lucide-react';
 
 export function SavedGrids() {
@@ -36,7 +36,7 @@ export function SavedGrids() {
           <p className="text-[13px] text-slate-500 mb-6 max-w-md mx-auto">You haven't created any custom decision grids. Start from a blank slate or use a template.</p>
           <div className="flex justify-center gap-4">
             <Link to="/new" className="text-white font-semibold px-4 py-2 bg-slate-900 hover:bg-slate-800 transition-colors text-[13px]">Start Blank</Link>
-            <Link to="/templates" className="text-slate-900 font-semibold px-4 py-2 bg-white hover:bg-slate-50 border border-slate-300 transition-colors text-[13px]">Browse Templates</Link>
+            <Link to="/frameworks" className="text-slate-900 font-semibold px-4 py-2 bg-white hover:bg-slate-50 border border-slate-300 transition-colors text-[13px]">Browse Frameworks</Link>
           </div>
         </div>
       )}

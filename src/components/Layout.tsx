@@ -27,7 +27,7 @@ export function Layout({ children }: { children: ReactNode }) {
 
   const navItems = [
     { name: 'Home', path: '/', icon: Grid },
-    { name: 'Templates', path: '/templates', icon: FileText },
+    { name: 'Frameworks', path: '/frameworks', icon: FileText },
     { name: 'Saved Grids', path: '/saved', icon: CheckSquare },
   ];
 
@@ -197,7 +197,7 @@ export function Layout({ children }: { children: ReactNode }) {
             <h4 className="text-slate-900 font-semibold mb-4 text-[11px] uppercase tracking-[1px]">Grid Setup</h4>
             <nav aria-label="Grid navigation">
               <ul className="space-y-3">
-                <li><Link to="/templates" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">Template Gallery</Link></li>
+                <li><Link to="/frameworks" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">Frameworks</Link></li>
                 <li><Link to="/new" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">New Decision Matrix</Link></li>
                 <li><Link to="/examples" className="hover:text-blue-700 transition-colors inline-block focus:outline-none focus:underline">Examples</Link></li>
               </ul>
